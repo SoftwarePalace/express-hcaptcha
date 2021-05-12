@@ -1,30 +1,39 @@
 {
-  "name": "express-hcaptcha",
-  "version": "0.0.4",
+  "name": "express-hcaptcha-ts",
+  "version": "0.0.1",
   "description": "A light middleware for Express.js to verify the hCaptcha token",
-  "main": "index.js",
+  "main": "lib/index.js",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/vastus/express-hcaptcha.git"
+    "url": "git+https://github.com/SoftwarePalace/express-hcaptcha.git"
   },
   "keywords": [
     "hcaptcha",
     "express"
   ],
-  "author": "Juho Hautala <juho.hautala@iki.fi>",
   "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/vastus/express-hcaptcha/issues"
-  },
-  "homepage": "https://github.com/vastus/express-hcaptcha#readme",
   "scripts": {
-    "test": "mocha"
+    "prepublish": "rollup -c & yarn tsc"
   },
   "dependencies": {
     "hcaptcha": "0.0.2"
   },
   "devDependencies": {
-    "mocha": "^8.2.1",
-    "sinon": "^6.3.5"
+    "@babel/cli": "^7.12.8",
+    "@babel/core": "^7.12.9",
+    "@babel/plugin-proposal-class-properties": "^7.12.1",
+    "@babel/plugin-transform-runtime": "^7.12.17",
+    "@babel/preset-env": "^7.12.7",
+    "@babel/preset-typescript": "^7.12.7",
+    "@rollup/plugin-babel": "^5.3.0",
+    "@rollup/plugin-commonjs": "^17.1.0",
+    "@rollup/plugin-json": "^4.1.0",
+    "@rollup/plugin-node-resolve": "^11.2.0",
+    "@types/express": "^4.17.11",
+    "rollup": "^2.47.0",
+    "typescript": "^4.2.4"
+  },
+  "peerDependencies": {
+    "express": "^4.17.1"
   }
 }
